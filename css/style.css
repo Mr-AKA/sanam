@@ -153,12 +153,16 @@ body {
 #spinner {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.8s ease-out, visibility 0s linear 0.5s;
+  transition:
+    opacity 0.8s ease-out,
+    visibility 0s linear 0.5s;
   z-index: 99999;
 }
 
 #spinner.show {
-  transition: opacity 0.8s ease-out, visibility 0s linear 0s;
+  transition:
+    opacity 0.8s ease-out,
+    visibility 0s linear 0s;
   visibility: visible;
   opacity: 1;
 }
@@ -327,7 +331,8 @@ body {
 
 /*** Hero Header ***/
 .hero-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../img/hero.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -369,7 +374,8 @@ body {
 
 .page-header {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../img/cart-page-header-img.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -636,3 +642,71 @@ body {
   line-height: 35px;
 }
 /*** Footer End ***/
+
+/* products section */
+.product-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.product-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.product-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.product-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  min-width: 200px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.product-card img {
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.product-card span {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.scroll-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.scroll-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background: #28a745;
+  color: #fff;
+}
